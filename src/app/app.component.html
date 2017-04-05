@@ -1,0 +1,14 @@
+<header>
+  <h1><img src="../assets/vhs_tape.jpg">
+    {{title}}
+  </h1>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/']">all tapes</a></li>
+      <li><a [routerLink]="['/rented']">rented list</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="main">
+  <router-outlet></router-outlet>
+</section>

@@ -1,0 +1,8 @@
+[
+  {"id": 1, "title": "2001: Space Odyssey", "year": 1968, "rating": 5.0, "status": "rented"},
+  {"id": 2, "title": "Truman Show", "year": 1998, "rating": 5.0, "status": "rented"},
+  {"id": 3, "title": "Terminator", "year": 1984, "rating": 5.0, "status": "free"},
+  {"id": 4, "title": "Mad Max 1", "year": 1979, "rating": 5.0, "status": "rented"},
+  {"id": 5, "title": "Mad Max 2: Wojownik szos", "year": 1981, "rating": 5.0, "status": "free"},
+  {"id": 6, "title": "Łowca androidów", "year": 1982, "rating": 5.0, "status": "rented"}
+]

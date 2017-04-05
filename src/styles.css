@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('assets/simple_dashed.png');
+  color: white;
+}
+
+img {
+  width: 100px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+header {
+  padding-top: 30px;
+  background-color: #8b0000;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #999;
+}
+
+h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+a, a:visited, a:active {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 0px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #999;
+}
+
+
+nav ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+nav li:first-child {
+  border-left: 2px dotted black;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline;
+  border-right: 2px dotted black;
+}
+
+#main {
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+nav {
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: darkred;
+}
+
+.glyphicon-star {
+  color: gold;
+}
