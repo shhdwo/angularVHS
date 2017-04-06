@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { RentedComponent } from './rented/rented.component';
 import { FilterPipe } from './filter.pipe';
 import { RentedPipe } from './rented.pipe';
+import { DetailsComponent } from './details/details.component';
 
 const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +22,8 @@ const APP_ROUTES: Routes = [
     HomeComponent,
     RentedComponent,
     FilterPipe,
-    RentedPipe
+    RentedPipe,
+    DetailsComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),

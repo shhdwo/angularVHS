@@ -82,3 +82,13 @@ nav {
 .glyphicon-star {
   color: gold;
 }
+
+.modal-content {
+  background-color: #111;
+}
+
+#tapeInfoModal {
+top:20%;
+outline: none;
+overflow:hidden;
+}
