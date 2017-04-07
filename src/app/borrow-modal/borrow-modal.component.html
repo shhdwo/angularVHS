@@ -1,7 +1,24 @@
-<form *ngIf="tape" id="add-tape" class="navbar-form navbar-left">
-  <label>Borrower: </label>
-  <input name="borrower" type="text" class="form-control" [(ngModel)]="borrower" />
-  <label>Borrow date: </label>
-  <input name="borrow_date" type="text" class="form-control" [(ngModel)]="borrow_date" />
-  <button class="btn btn-warning"  (click)="rentTape(tape, borrower, borrow_date)">Submit</button>
-</form>
+<!-- Borrow tape modal -->
+<div class="modal fade" id="borrowTapeModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Borrow a tape</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Add tape form -->
+        <form *ngIf="tape" id="add-tape" class="navbar-form navbar-left">
+          <label>Borrower: </label>
+          <input name="borrower" type="text" class="form-control" [(ngModel)]="borrower" />
+          <label>Borrow date: </label>
+          <input name="borrow_date" type="text" class="form-control" [(ngModel)]="borrow_date" />
+          <button class="btn btn-warning"  (click)="rentTape(tape, borrower, borrow_date)">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tape of tapes | filter: term">
+    <tr *ngFor="let tape of dataService.tapes | filter: term">
       <td>{{tape.id}}</td>
       <td>{{tape.title}}</td>
       <td>{{tape.year}}</td>
@@ -31,23 +31,8 @@
   </tbody>
 </table>
 
-<!-- Tape details modal -->
-<div class="modal fade" id="tapeInfoModal" role="dialog">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Tape details</h4>
-      </div>
-      <div class="modal-body">
-        <app-details [tape]="selectedTape"></app-details>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<app-details [tape]="selectedTape"></app-details>
+<app-borrow-modal [tape]="selectedTape"></app-borrow-modal>
 
 <!-- Add new modal -->
 <div class="modal fade" id="addTapeModal" role="dialog">
@@ -72,27 +57,8 @@
             <label>Description: </label>
             <textarea name="description" class="form-control" rows="5" id="comment" [(ngModel)]="description"></textarea>
           </div>
-          <button class="btn btn-warning" (click)="fbPostData(title, year, image, description)">Add tape</button>
+          <button class="btn btn-warning" (click)="addTape(title, year, image, description)">Add tape</button>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Borrow tape modal -->
-<div class="modal fade" id="borrowTapeModal" role="dialog">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Borrow a tape</h4>
-      </div>
-      <div class="modal-body">
-        <!-- Add tape form -->
-        <app-borrow-modal [tape]="selectedTape"></app-borrow-modal>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

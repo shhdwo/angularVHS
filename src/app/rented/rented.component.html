@@ -18,7 +18,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tape of tapes | rented | filter: term">
+    <tr *ngFor="let tape of dataService.tapes | rented | filter: term">
       <td>{{tape.id}}</td>
       <td>{{tape.title}}</td>
       <td>{{tape.borrower}}</td>

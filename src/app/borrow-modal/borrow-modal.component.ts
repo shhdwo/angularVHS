@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../data.service';
 import { Tape } from '../app.tape';
 declare var firebase: any;
 
@@ -11,23 +12,13 @@ export class BorrowModalComponent implements OnInit {
 
   @Input() tape: Tape;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   rentTape(tape: Tape, borrower: string, borrow_date: string){
     tape.status = "rented";
     tape.borrower = borrower;
     tape.borrow_date = borrow_date;
-    firebase.database().ref('/' + tape.id).set({
-      id: tape.id,
-      title: tape.title,
-      year: tape.year,
-      rating: tape.rating,
-      status: tape.status,
-      borrower: tape.borrower,
-      borrow_date: tape.borrow_date,
-      image: tape.image,
-      description: tape.description
-    })
+    this.dataService.fbSetTape(tape);
   }
 
   ngOnInit() {

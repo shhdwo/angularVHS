@@ -1,11 +1,27 @@
-<div id="tapeDetails" *ngIf="tape">
-  <div id="tapeDetailsSidebar">
-    <img src="{{tape.image}}">
-    <p>Title: {{tape.title}}</p>
-    <p>Release date: {{tape.year}}</p>
-    <p>Status: {{tape.status}}</p>
-  </div>
-  <div id="tapeDetailsDescription">
-    <p>{{tape.description}}</p>
+<!-- Tape details modal -->
+<div class="modal fade" id="tapeInfoModal" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Tape details</h4>
+      </div>
+      <div class="modal-body">
+        <div id="tapeDetails" *ngIf="tape">
+          <div id="tapeDetailsSidebar">
+            <img src="{{tape.image}}">
+            <p>Title: {{tape.title}}</p>
+            <p>Release date: {{tape.year}}</p>
+            <p>Status: {{tape.status}}</p>
+          </div>
+          <div id="tapeDetailsDescription">
+            <p>{{tape.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
