@@ -1,3 +1,11 @@
-<p *ngIf="tape">
-  details works! {{tape.year}}
-</p>
+<div id="tapeDetails" *ngIf="tape">
+  <div id="tapeDetailsSidebar">
+    <img src="{{tape.image}}">
+    <p>Title: {{tape.title}}</p>
+    <p>Release date: {{tape.year}}</p>
+    <p>Status: {{tape.status}}</p>
+  </div>
+  <div id="tapeDetailsDescription">
+    <p>{{tape.description}}</p>
+  </div>
+</div>

@@ -13,6 +13,11 @@ img {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+#logo {
+  width: 110px;
+  margin: auto;
+}
+
 header {
   padding-top: 30px;
   background-color: #8b0000;
@@ -23,6 +28,7 @@ h1 {
   letter-spacing: 2px;
   text-align: center;
   color: #999;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -83,12 +89,70 @@ nav {
   color: gold;
 }
 
+.glyphicon-remove-sign {
+  color: red;
+  cursor: pointer;
+}
+
+.glyphicon-ok-sign {
+  color: gold;
+  cursor: pointer;
+}
+
+.glyphicon-info-sign {
+  color: lightblue;
+  cursor: pointer;
+}
+
+span.glyphicon-plus {
+  color: gold;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
 .modal-content {
   background-color: #111;
 }
 
-#tapeInfoModal {
-top:20%;
-outline: none;
-overflow:hidden;
+.modal-sm .modal-body {
+  height: 500px;
+}
+
+.modal-sm input, .modal-sm textarea {
+  margin-bottom: 15px;
+}
+
+#borrowTapeModal .modal-body {
+  height: 250px;
+}
+
+#tapeDetails {
+  margin: 0px;
+  padding: 0px;
+}
+
+#tapeDetailsSidebar {
+  display: block;
+  margin: 30px;
+  padding: 0px;
+}
+
+#tapeDetailsDescription {
+  display: block;
+  margin: 30px;
+  padding: 0px;
+}
+
+#tapeDetails img {
+  width:200px;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+}
+
+#filter {
+  padding: 0px;
+  margin-bottom: 20px;
 }

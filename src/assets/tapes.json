@@ -1,8 +1,68 @@
 [
-  {"id": 1, "title": "2001: Space Odyssey", "year": 1968, "rating": 5.0, "status": "rented"},
-  {"id": 2, "title": "Truman Show", "year": 1998, "rating": 5.0, "status": "rented"},
-  {"id": 3, "title": "Terminator", "year": 1984, "rating": 5.0, "status": "free"},
-  {"id": 4, "title": "Mad Max 1", "year": 1979, "rating": 5.0, "status": "rented"},
-  {"id": 5, "title": "Mad Max 2: Wojownik szos", "year": 1981, "rating": 5.0, "status": "free"},
-  {"id": 6, "title": "Łowca androidów", "year": 1982, "rating": 5.0, "status": "rented"}
+  {
+    "id": 0,
+    "title": "2001: Space Odyssey",
+    "year": 1968,
+    "rating": 5.0,
+    "status": "free",
+    "borrower": "Piotr Szydłowski",
+    "borrow_date": "2017/04/01",
+    "image": "../assets/space_odyssey.png",
+    "description": "Film dzieli się na trzy epizody, których akcja ma miejsce w różnych okresach historycznych i zakątkach wszechświata. "
+  },
+  {
+    "id": 1,
+    "title": "Truman Show",
+    "year": 1998,
+    "rating": 5.0,
+    "status": "rented",
+    "borrower": "Piotr Szydłowski",
+    "borrow_date": "2017/04/01",
+    "image": "../assets/truman_show.png",
+    "description": "Truman Burbank odkrywa, że jest głównym bohaterem reality show nadawanego 24 godziny na dobę."
+  },
+  {
+    "id": 2,
+    "title": "Terminator",
+    "year": 1984,
+    "rating": 5.0,
+    "status": "free",
+    "borrower": "",
+    "borrow_date": "",
+    "image": "../assets/terminator.png",
+    "description": "Elektroniczny morderca zostaje wysłany z przyszłości do roku 1984, by zabić matkę przyszłego lidera rewolucji. W ślad za nim rusza Kyle Reese, który ma chronić kobietę."
+  },
+  {
+    "id": 3,
+    "title": "Mad Max 1",
+    "year": 1979,
+    "rating": 5.0,
+    "status": "rented",
+    "borrower": "Piotr Szydłowski",
+    "borrow_date": "2017/04/01",
+    "image": "../assets/mad_max1.png",
+    "description": "Max, policjant drogówki, naraża się gangowi motocyklowemu. Gdy bandyci zaczynają prześladować jego rodzinę, wypowiada im walkę na śmierć i życie. "
+  },
+  {
+    "id": 4,
+    "title": "Mad Max 2: Wojownik szos",
+    "year": 1981,
+    "rating": 5.0,
+    "status": "free",
+    "borrower": "",
+    "borrow_date": "",
+    "image": "../assets/mad_max2.png",
+    "description": "Max postanawia pomóc mieszkańcom atakowanej przez bandytów osady w zdobyciu pojazdu, dzięki któremu mogliby poszukać lepszego miejsca do życia. "
+  },
+  {
+    "id": 5,
+    "title": "Łowca androidów",
+    "year": 1982,
+    "rating": 5.0,
+    "status": "rented",
+    "borrower": "Piotr Szydłowski",
+    "borrow_date": "2017/04/01",
+    "image": "../assets/lowca_androidow.png",
+    "description": "Rok 2019. Rick Deckard, członek specjalnego oddziału policji, ma za zadanie tropienie i eliminowanie replikantów - maszyn stworzonych przez ludzi do wykonywania niebezpiecznych zadań."
+  }
 ]

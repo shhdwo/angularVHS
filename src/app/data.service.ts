@@ -8,7 +8,7 @@ export class DataService {
   constructor(private http: Http) { }
 
   fetchData() {
-    return this.http.get('assets/tapes.json').map(
+    return this.http.get('https://vhsrental-angular.firebaseio.com/.json').map(
       (res) => res.json()
     );
   }
