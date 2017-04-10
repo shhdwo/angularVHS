@@ -57,7 +57,7 @@
             <label>Description: </label>
             <textarea required="true" minlength=20 maxlength=500 name="description" class="form-control" rows="7" cols=28 id="comment" [(ngModel)]="description"></textarea>
           </div>
-          <button class="btn btn-warning" (click)="addTape(title, year, image, description)">Add tape</button>
+          <button class="btn btn-warning" (click)="addTape(title, year, image, description)" data-dismiss="modal">Add tape</button>
         </form>
       </div>
       <div class="modal-footer">

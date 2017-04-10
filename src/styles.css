@@ -130,6 +130,15 @@ span.glyphicon-plus {
   height: 250px;
 }
 
+#returnTapeModal .modal-body {
+  height: 350px;
+}
+
+#payment {
+  font-size: 18px;
+  margin: 20px 0px 10px;
+}
+
 #tapeDetails {
   margin: 0px;
   padding: 0px;

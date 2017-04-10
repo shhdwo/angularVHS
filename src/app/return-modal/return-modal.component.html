@@ -1,3 +1,25 @@
-<p>
-  return-modal works!
-</p>
+<!-- Return tape modal -->
+<div class="modal fade" id="returnTapeModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Return a tape</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Return tape form -->
+        <form *ngIf="tape" id="return-tape" class="navbar-form navbar-left">
+          <label>Delay in days: </label>
+          <input value="0" required="true" min=0 max=999 name="delay" type="number" class="form-control" [(ngModel)]="delay" />
+          <label><input name="unrewinded" type="checkbox" class="form-control" [(ngModel)]="unrewinded" /> Unrewinded penalty</label>
+          <label><input name="broken" type="checkbox" class="form-control" [(ngModel)]="broken" /> Broken tape penalty</label>
+          <p id="payment">Total payment: {{calculatePayment(delay, unrewinded, broken)}} $</p>
+          <button class="btn btn-warning" (click)="returnTape(tape, delay)" data-dismiss="modal">Return</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

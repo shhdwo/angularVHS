@@ -24,8 +24,8 @@
       <td>{{tape.borrower}}</td>
       <td>{{tape.borrow_date | date:'yyyy-MM-dd'}}</td>
       <td>{{tape.status}}</td>
-      <td><span (click)="returnTape(tape)" class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></td>
+      <td><span (click)="selectTape(tape)" data-toggle="modal" data-target="#returnTapeModal" class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></td>
     </tr>
   </tbody>
 </table>
-<app-return-modal></app-return-modal>
+<app-return-modal [tape]="selectedTape"></app-return-modal>

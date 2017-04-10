@@ -4,8 +4,7 @@ import { Tape } from '../app.tape';
 
 @Component({
   selector: 'app-borrow-modal',
-  templateUrl: './borrow-modal.component.html',
-  styleUrls: ['./borrow-modal.component.css']
+  templateUrl: './borrow-modal.component.html'
 })
 export class BorrowModalComponent implements OnInit {
 
