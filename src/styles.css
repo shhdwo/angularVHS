@@ -165,6 +165,10 @@ label {
   display: block;
 }
 
+.form-group {
+  margin-right: 20px;
+}
+
 #filter {
   padding: 0px;
   margin-bottom: 20px;

@@ -5,6 +5,10 @@
     <label>Filter by title: </label>
     <input name="title" type="text" class="form-control" [(ngModel)]="term" />
   </div>
+  <div class="form-group">
+    <label>Filter by borrower: </label>
+    <input name="borrower" type="text" class="form-control" [(ngModel)]="termBorrower" />
+  </div>
 </form>
 <table class="table table-hover">
   <thead>
@@ -18,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tape of dataService.tapes | rented | filter: term">
+    <tr *ngFor="let tape of dataService.tapes | rented | filter: term | filterBorrower: termBorrower">
       <td>{{tape.id}}</td>
       <td>{{tape.title}}</td>
       <td>{{tape.borrower}}</td>
