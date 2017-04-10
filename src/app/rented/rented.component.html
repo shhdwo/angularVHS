@@ -13,16 +13,16 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>id</th>
-      <th>title</th>
-      <th>borrower</th>
-      <th>borrow date</th>
+      <th>id <span (click)="setSortBy('id')" class="glyphicon glyphicon-sort" aria-hidden="true"></span></th>
+      <th>title <span (click)="setSortBy('title')" class="glyphicon glyphicon-sort" aria-hidden="true"></span></th>
+      <th>borrower <span (click)="setSortBy('borrower')" class="glyphicon glyphicon-sort" aria-hidden="true"></span></th>
+      <th>borrow date <span (click)="setSortBy('borrow_date')" class="glyphicon glyphicon-sort" aria-hidden="true"></span></th>
       <th>status</th>
       <th>return</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tape of dataService.tapes | rented | filter: term | filterBorrower: termBorrower">
+    <tr *ngFor="let tape of dataService.tapes | rented | filter: term | filterBorrower: termBorrower | sortBy: sortParam">
       <td>{{tape.id}}</td>
       <td>{{tape.title}}</td>
       <td>{{tape.borrower}}</td>

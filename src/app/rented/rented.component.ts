@@ -11,11 +11,16 @@ import { Tape } from '../app.tape';
 export class RentedComponent implements OnInit {
 
   selectedTape: Tape;
+  sortParam: string;
 
   constructor(private dataService: DataService) { }
 
   selectTape(tape: Tape){
     this.selectedTape = tape;
+  }
+
+  setSortBy(key){
+    this.sortParam = key;
   }
 
   ngOnInit() {

@@ -108,6 +108,12 @@ nav {
   cursor: pointer;
 }
 
+.glyphicon-sort {
+  margin-left: 5px;
+  color: #777;
+  cursor: pointer;
+}
+
 span.glyphicon-plus {
   color: gold;
   cursor: pointer;

@@ -13,6 +13,7 @@ import { DetailsComponent } from './details/details.component';
 import { BorrowModalComponent } from './borrow-modal/borrow-modal.component';
 import { ReturnModalComponent } from './return-modal/return-modal.component';
 import { FilterBorrowerPipe } from './filter-borrower.pipe';
+import { SortByPipe } from './sort-by.pipe';
 
 const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +30,8 @@ const APP_ROUTES: Routes = [
     DetailsComponent,
     BorrowModalComponent,
     ReturnModalComponent,
-    FilterBorrowerPipe
+    FilterBorrowerPipe,
+    SortByPipe
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),
