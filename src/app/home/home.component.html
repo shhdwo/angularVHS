@@ -47,15 +47,15 @@
         <form id="add-tape" class="navbar-form navbar-left">
           <div>
             <label>Title: </label>
-            <input name="title" type="text" class="form-control" [(ngModel)]="title" />
+            <input required="true" minlength=2 maxlength=25 name="title" type="text" class="form-control" [(ngModel)]="title" />
             <label>Release date: </label>
-            <input name="year" type="text" class="form-control" [(ngModel)]="year" />
+            <input required="true" min=1900 max=2050 name="year" type="number" class="form-control" [(ngModel)]="year" />
             <label>Link to image: </label>
-            <input name="image" type="text" class="form-control" [(ngModel)]="image" />
+            <input required="true" name="image" type="url" class="form-control" [(ngModel)]="image" />
           </div>
           <div>
             <label>Description: </label>
-            <textarea name="description" class="form-control" rows="5" id="comment" [(ngModel)]="description"></textarea>
+            <textarea required="true" minlength=20 maxlength=500 name="description" class="form-control" rows="7" cols=28 id="comment" [(ngModel)]="description"></textarea>
           </div>
           <button class="btn btn-warning" (click)="addTape(title, year, image, description)">Add tape</button>
         </form>

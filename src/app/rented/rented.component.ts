@@ -12,11 +12,17 @@ declare var firebase: any;
 })
 export class RentedComponent implements OnInit {
 
+  selectedTape: Tape;
+
   constructor(private dataService: DataService) { }
 
   returnTape(tape: Tape){
     tape.status = "free";
     this.dataService.fbSetTape(tape);
+  }
+
+  selectTape(tape: Tape){
+    this.selectedTape = tape;
   }
 
   ngOnInit() {

@@ -6,6 +6,10 @@ body {
   color: white;
 }
 
+textarea {
+  resize: none;
+}
+
 img {
   width: 100px;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);

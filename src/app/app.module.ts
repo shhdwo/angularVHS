@@ -11,6 +11,7 @@ import { FilterPipe } from './filter.pipe';
 import { RentedPipe } from './rented.pipe';
 import { DetailsComponent } from './details/details.component';
 import { BorrowModalComponent } from './borrow-modal/borrow-modal.component';
+import { ReturnModalComponent } from './return-modal/return-modal.component';
 
 const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -25,7 +26,8 @@ const APP_ROUTES: Routes = [
     FilterPipe,
     RentedPipe,
     DetailsComponent,
-    BorrowModalComponent
+    BorrowModalComponent,
+    ReturnModalComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES),

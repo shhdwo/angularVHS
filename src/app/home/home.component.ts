@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Tape } from '../app.tape';
-declare var firebase: any;
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,6 @@ declare var firebase: any;
 export class HomeComponent implements OnInit {
 
   selectedTape: Tape;
-  actualId: number;
 
   constructor(private dataService: DataService) { }
 

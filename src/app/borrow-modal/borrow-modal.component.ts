@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
 import { Tape } from '../app.tape';
-declare var firebase: any;
 
 @Component({
   selector: 'app-borrow-modal',

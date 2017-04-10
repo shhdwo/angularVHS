@@ -10,9 +10,9 @@
         <!-- Add tape form -->
         <form *ngIf="tape" id="add-tape" class="navbar-form navbar-left">
           <label>Borrower: </label>
-          <input name="borrower" type="text" class="form-control" [(ngModel)]="borrower" />
+          <input required="true" minlength=4 maxlength=25 name="borrower" type="text" class="form-control" [(ngModel)]="borrower" />
           <label>Borrow date: </label>
-          <input name="borrow_date" type="text" class="form-control" [(ngModel)]="borrow_date" />
+          <input required="true" name="borrow_date" type="date" class="form-control" [(ngModel)]="borrow_date" />
           <button class="btn btn-warning"  (click)="rentTape(tape, borrower, borrow_date)">Submit</button>
         </form>
       </div>
