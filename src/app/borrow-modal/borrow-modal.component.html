@@ -8,12 +8,15 @@
       </div>
       <div class="modal-body">
         <!-- Add tape form -->
-        <form *ngIf="tape" id="borrow-tape" class="navbar-form navbar-left">
+        <form *ngIf="tape" #borrowTapeForm='ngForm' class="navbar-form navbar-left">
           <label>Borrower: </label>
-          <input required="true" minlength=4 maxlength=25 name="borrower" type="text" class="form-control" [(ngModel)]="borrower" />
+          <input #borrowerName="ngModel" required="true" minlength=4 maxlength=25 name="borrower" type="text" class="form-control" [(ngModel)]="borrower" />
+          <div [hidden]="borrowerName.valid || borrowerName.pristine" class="alert alert-danger">
+          Borrower name must be at least 4 characters long
+          </div>
           <label>Borrow date: </label>
           <input required="true" name="borrow_date" type="date" class="form-control" [(ngModel)]="borrow_date" />
-          <button class="btn btn-warning" (click)="rentTape(tape, borrower, borrow_date)" data-dismiss="modal">Submit</button>
+          <button type="submit" [disabled]="!borrowTapeForm.form.valid" class="btn btn-warning" (click)="rentTape(tape, borrower, borrow_date)" data-dismiss="modal">Submit</button>
         </form>
       </div>
       <div class="modal-footer">

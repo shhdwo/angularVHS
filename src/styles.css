@@ -132,12 +132,16 @@ span.glyphicon-plus {
   margin-bottom: 15px;
 }
 
+#addTapeModal .modal-body {
+  height: 620px;
+}
+
 #borrowTapeModal .modal-body {
-  height: 250px;
+  height: 280px;
 }
 
 #returnTapeModal .modal-body {
-  height: 350px;
+  height: 370px;
 }
 
 #payment {
@@ -178,4 +182,8 @@ label {
 #filter {
   padding: 0px;
   margin-bottom: 20px;
+}
+
+.alert {
+  padding: 2px;
 }

@@ -44,10 +44,13 @@
       </div>
       <div class="modal-body">
         <!-- Add tape form -->
-        <form id="add-tape" class="navbar-form navbar-left">
+        <form #addTapeForm='ngForm' class="navbar-form navbar-left">
           <div>
             <label>Title: </label>
-            <input required="true" minlength=2 maxlength=25 name="title" type="text" class="form-control" [(ngModel)]="title" />
+            <input required="true" minlength=2 maxlength=25 name="title" type="text" class="form-control" [(ngModel)]="title" #movieTitle="ngModel" />
+            <div [hidden]="movieTitle.valid || movieTitle.pristine" class="alert alert-danger">
+            Movie title must be at least 2 characters long
+            </div>
             <label>Release date: </label>
             <input required="true" min=1900 max=2050 name="year" type="number" class="form-control" [(ngModel)]="year" />
             <label>Link to image: </label>
@@ -55,9 +58,12 @@
           </div>
           <div>
             <label>Description: </label>
-            <textarea required="true" minlength=20 maxlength=500 name="description" class="form-control" rows="7" cols=28 id="comment" [(ngModel)]="description"></textarea>
+            <textarea #movieDescription="ngModel" required="true" minlength=20 maxlength=500 name="description" class="form-control" rows="7" cols=28 id="comment" [(ngModel)]="description"></textarea>
+            <div [hidden]="movieDescription.valid || movieDescription.pristine" class="alert alert-danger">
+            Description must be at least 20 characters long
+            </div>
           </div>
-          <button class="btn btn-warning" (click)="addTape(title, year, image, description)" data-dismiss="modal">Add tape</button>
+          <button [disabled]="!addTapeForm.form.valid" class="btn btn-warning" (click)="addTape(title, year, image, description)" data-dismiss="modal">Add tape</button>
         </form>
       </div>
       <div class="modal-footer">

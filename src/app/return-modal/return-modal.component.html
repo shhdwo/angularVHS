@@ -8,13 +8,16 @@
       </div>
       <div class="modal-body">
         <!-- Return tape form -->
-        <form *ngIf="tape" id="return-tape" class="navbar-form navbar-left">
+        <form *ngIf="tape" #returnTapeForm='ngForm' class="navbar-form navbar-left">
           <label>Delay in days: </label>
-          <input value="0" required="true" min=0 max=999 name="delay" type="number" class="form-control" [(ngModel)]="delay" />
+          <input #delayField="ngModel" value="0" required="true" min=0 max=999 name="delay" type="number" class="form-control" [(ngModel)]="delay" />
+          <div [hidden]="delayField.valid || delayField.pristine" class="alert alert-danger">
+          This field is obligatory
+          </div>
           <label><input name="unrewinded" type="checkbox" class="form-control" [(ngModel)]="unrewinded" /> Unrewinded penalty</label>
           <label><input name="broken" type="checkbox" class="form-control" [(ngModel)]="broken" /> Broken tape penalty</label>
           <p id="payment">Total payment: {{calculatePayment(delay, unrewinded, broken)}} $</p>
-          <button class="btn btn-warning" (click)="returnTape(tape, delay)" data-dismiss="modal">Return</button>
+          <button [disabled]="!returnTapeForm.form.valid" class="btn btn-warning" (click)="returnTape(tape, delay)" data-dismiss="modal">Return</button>
         </form>
       </div>
       <div class="modal-footer">

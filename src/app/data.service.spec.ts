@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { DataService } from './data.service';
+import { HttpModule } from '@angular/http';
 
 describe('DataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DataService]
+      providers: [DataService],
+      imports: [ HttpModule ]
     });
   });
 
