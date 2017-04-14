@@ -15,6 +15,9 @@ import { RentedPipe } from './rented.pipe';
 import { FilterBorrowerPipe } from './filter-borrower.pipe';
 import { SortByPipe } from './sort-by.pipe';
 
+import { AngularFireModule } from 'angularfire2';
+import { firebaseConfig } from '../environments/firebase.config';
+
 const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'rented', component: RentedComponent }
@@ -37,7 +40,8 @@ const APP_ROUTES: Routes = [
     RouterModule.forRoot(APP_ROUTES),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

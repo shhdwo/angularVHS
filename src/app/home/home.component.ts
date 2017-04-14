@@ -9,6 +9,7 @@ import { Tape } from '../app.tape';
 })
 export class HomeComponent implements OnInit {
 
+  pageTitle: String = "tapes listing";
   selectedTape: Tape;
 
   constructor(private dataService: DataService) { }

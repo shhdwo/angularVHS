@@ -1,5 +1,5 @@
 
-<h4>Rented tapes</h4>
+<h4>{{pageTitle}}</h4>
 <form id="filter" class="navbar-form navbar-left">
   <div class="form-group">
     <label>Filter by title: </label>
@@ -22,13 +22,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tape of dataService.tapes | rented | filter: term | filterBorrower: termBorrower | sortBy: sortParam">
-      <td>{{tape.id}}</td>
-      <td>{{tape.title}}</td>
-      <td>{{tape.borrower}}</td>
-      <td>{{tape.borrow_date | date:'yyyy-MM-dd'}}</td>
-      <td>{{tape.status}}</td>
-      <td><span (click)="selectTape(tape)" data-toggle="modal" data-target="#returnTapeModal" class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></td>
+    <tr *ngFor="let tape of dataService.getTapes() | rented | filter: term | filterBorrower: termBorrower | sortBy: sortParam">
+      <td class="tapeId">{{tape.id}}</td>
+      <td class="tapeTitle">{{tape.title}}</td>
+      <td class="tapeBorrower">{{tape.borrower}}</td>
+      <td class="tapeBorrowDate">{{tape.borrow_date | date:'yyyy-MM-dd'}}</td>
+      <td class="tapeStatus">{{tape.status}}</td>
+      <td class="tapeReturnButton"><span (click)="selectTape(tape)" data-toggle="modal" data-target="#returnTapeModal" class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></td>
     </tr>
   </tbody>
 </table>

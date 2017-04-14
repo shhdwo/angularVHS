@@ -10,6 +10,7 @@ import { Tape } from '../app.tape';
 })
 export class RentedComponent implements OnInit {
 
+  pageTitle: String = "rented tapes";
   selectedTape: Tape;
   sortParam: string;
 

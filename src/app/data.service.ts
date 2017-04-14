@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+
 declare var firebase: any;
 
 @Injectable()
@@ -9,7 +10,8 @@ export class DataService {
   actualId: number;
   tapes = [];
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
   fetchData() {
     return this.http.get('https://vhsrental-angular.firebaseio.com/.json').map(
@@ -55,6 +57,10 @@ export class DataService {
       borrow_date: "",
       image: image,
       description: description});
+  }
+
+  getTapes() {
+    return this.tapes;
   }
 
 }

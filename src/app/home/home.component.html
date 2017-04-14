@@ -1,5 +1,5 @@
 
-<h4>Tapes listing <span data-toggle="modal" data-target="#addTapeModal" class="glyphicon glyphicon-plus" aria-hidden="true"></span> add new tape</h4>
+<h4>{{pageTitle}} <span data-toggle="modal" data-target="#addTapeModal" class="glyphicon glyphicon-plus" aria-hidden="true"></span> add new tape</h4>
 <form id="filter" class="navbar-form navbar-left">
   <div class="form-group">
     <label>Filter by title: </label>
@@ -19,14 +19,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tape of dataService.tapes | filter: term">
-      <td>{{tape.id}}</td>
-      <td>{{tape.title}}</td>
-      <td>{{tape.year}}</td>
-      <td>{{tape.rating}} <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-      <td>{{tape.status}}</td>
-      <td><span (click)="selectTape(tape)" data-toggle="modal" data-target="#tapeInfoModal" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></td>
-      <td><span *ngIf="tape.status == 'free'" (click)="selectTape(tape)" data-toggle="modal" data-target="#borrowTapeModal" class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span></td>
+    <tr *ngFor="let tape of dataService.getTapes() | filter: term">
+      <td class="tapeId">{{tape.id}}</td>
+      <td class="tapeTitle">{{tape.title}}</td>
+      <td class="tapeYear">{{tape.year}}</td>
+      <td class="tapeRating">{{tape.rating}} <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
+      <td class="tapeStatus">{{tape.status}}</td>
+      <td class="tapeDetails"><span (click)="selectTape(tape)" data-toggle="modal" data-target="#tapeInfoModal" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></td>
+      <td class="tapeBorrow"><span *ngIf="tape.status == 'free'" (click)="selectTape(tape)" data-toggle="modal" data-target="#borrowTapeModal" class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span></td>
     </tr>
   </tbody>
 </table>
